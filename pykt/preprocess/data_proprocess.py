@@ -5,6 +5,12 @@ def process_raw_data(dataset_name,dname2paths):
     dname = "/".join(readf.split("/")[0:-1])
     writef = os.path.join(dname, "data.txt")
     print(f"Start preprocessing data: {dataset_name}")
+    print(dataset_name,"DNAME")
+    if dataset_name == "yourika2023":
+        from .yourika2023_preprocess import read_data_from_csv
+        print("ALOOOOOOOOOOOOOOO")
+    if dataset_name == "assist2009":
+        from .assist2009_preprocess import read_data_from_csv
     if dataset_name == "assist2009":
         from .assist2009_preprocess import read_data_from_csv
     elif dataset_name == "assist2012":
